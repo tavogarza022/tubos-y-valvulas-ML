@@ -363,6 +363,16 @@
             border-color: var(--primary-blue);
             box-shadow: 0 0 0 0.2rem rgba(0, 51, 102, 0.25);
         }
+
+        .form-control::placeholder {
+            color: #999;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .form-control:focus::placeholder {
+            color: transparent;
+        }
         
         .btn-submit {
             background-color: var(--accent-red);
@@ -662,7 +672,7 @@
                             <i class="bi bi-whatsapp contact-icon"></i>
                             <div>
                                 <h5>WhatsApp Ventas</h5>
-                                <p class="mb-0 text-white-50">+52 1 81 8074 5704</p>
+                                <p class="mb-0 text-white-50">+52 1 81 1680 4447</p>
                             </div>
                         </div>
                         
@@ -680,27 +690,32 @@
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4" style="color: var(--primary-blue);">Envíenos un mensaje</h3>
-                            <form action="gracias.html" method="GET">
+                            <form action="gracias.html" method="GET" class="needs-validation" novalidate>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="nombre" class="form-label">Nombre completo</label>
-                                        <input type="text" class="form-control" id="nombre" placeholder="Su nombre">
+                                        <input type="text" class="form-control" id="nombre" placeholder="Su nombre" required>
+                                        <div class="invalid-feedback">Por favor ingrese su nombre.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="empresa" class="form-label">Empresa</label>
-                                        <input type="text" class="form-control" id="empresa" placeholder="Nombre de su empresa">
+                                        <input type="text" class="form-control" id="empresa" placeholder="Nombre de su empresa" required>
+                                        <div class="invalid-feedback">Por favor ingrese el nombre de su empresa.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">Correo electrónico</label>
-                                        <input type="email" class="form-control" id="email" placeholder="ejemplo@empresa.com">
+                                        <input type="email" class="form-control" id="email" placeholder="ejemplo@empresa.com" required>
+                                        <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="telefono" class="form-label">Teléfono</label>
-                                        <input type="tel" class="form-control" id="telefono" placeholder="A 10 dígitos">
+                                        <input type="tel" class="form-control" id="telefono" placeholder="A 10 dígitos" required pattern="[0-9]{10}">
+                                        <div class="invalid-feedback">Por favor ingrese un teléfono válido de 10 dígitos.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="mensaje" class="form-label">Mensaje o requerimiento</label>
-                                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Describa los productos que busca..."></textarea>
+                                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Describa los productos que busca..." required></textarea>
+                                        <div class="invalid-feedback">Por favor detalle su requerimiento.</div>
                                     </div>
                                     <div class="col-12 mt-4">
                                         <button type="submit" class="btn btn-submit">Enviar Cotización</button>
@@ -782,6 +797,22 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Bootstrap validation script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
     </script>
 </body>
 </html>
