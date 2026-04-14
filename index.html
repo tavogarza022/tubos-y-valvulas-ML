@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tubos y Válvulas ML | Infraestructura Industrial</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18087363953"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18087363953');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MX6M85RP');</script>
+    <!-- End Google Tag Manager -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Bootstrap 5.3 CDN -->
@@ -326,9 +343,8 @@
         .contact-info {
             background: var(--primary-blue);
             color: var(--white);
-            padding: 40px;
+            padding: 48px;
             border-radius: 8px;
-            height: 100%;
         }
 
         .contact-item {
@@ -337,11 +353,21 @@
             margin-bottom: 25px;
         }
         
+        /* Transparent wrapper for web to maintain original structure */
+        .contact-icon-container {
+            display: contents;
+        }
+
         .contact-icon {
             font-size: 1.5rem;
             color: var(--accent-red);
             margin-right: 15px;
             margin-top: 5px;
+        }
+
+        .contact-item h5 {
+            color: var(--white);
+            font-weight: 700;
         }
 
         .contact-link-hover {
@@ -444,6 +470,18 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+            .contact-info {
+                padding: 30px 20px;
+            }
+            .section-title {
+                margin-bottom: 30px;
+            }
+            .section-subtitle {
+                margin-bottom: 30px;
+            }
             .hero {
                 justify-content: center;
             }
@@ -462,10 +500,34 @@
                 padding: 20px;
                 margin-top: 15px;
             }
+            
+            /* Mobile-only contact alignment fixes */
+            .contact-icon-container {
+                display: flex;
+                width: 40px;
+                flex-shrink: 0;
+                justify-content: flex-start;
+                padding-top: 6px;
+            }
+            .contact-icon {
+                font-size: 1.3rem;
+                margin-top: 0;
+                margin-right: 0;
+                line-height: 1;
+            }
+            .contact-item h5 {
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+                line-height: 1.2;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX6M85RP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -686,9 +748,9 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="img/proveedor-confianza.jpg" class="img-fluid rounded shadow w-100" style="object-fit: cover; aspect-ratio: 4/3;" alt="Proveedor Industrial de Confianza">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center text-lg-start">
                     <h2 class="mb-4" style="color: var(--primary-blue); font-weight: 700;">Somos tu proveedor industrial de confianza</h2>
-                    <ul class="list-unstyled mt-0">
+                    <ul class="list-unstyled mt-0 d-inline-block text-start">
                         <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span class="text-muted">Disponibilidad de inventario</span></li>
                         <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span class="text-muted">Logística y entrega puntual</span></li>
                         <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span class="text-muted">Asesoría técnica especializada</span></li>
@@ -708,11 +770,13 @@
             
             <div class="row g-4">
                 <div class="col-lg-5">
-                    <div class="contact-info h-100 shadow">
+                    <div class="contact-info shadow">
                         <h3 class="mb-4 text-white">Contacto</h3>
                         
                         <div class="contact-item">
-                            <i class="bi bi-geo-alt-fill contact-icon"></i>
+                            <div class="contact-icon-container">
+                                <i class="bi bi-geo-alt-fill contact-icon"></i>
+                            </div>
                             <div>
                                 <h5>Dirección Principal</h5>
                                 <a href="https://www.google.com/maps/search/?api=1&query=Villa+Sofia+115+Col.+Las+Villas+Gral+Escobedo+66062" target="_blank" rel="noopener noreferrer" class="mb-0 text-white-50 text-decoration-none contact-link-hover d-block">Col. Las Villas, Villa Sofia 115, Gral Escobedo, C.P. 66062 <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem;"></i></a>
@@ -720,16 +784,19 @@
                         </div>
                         
                         <div class="contact-item">
-                            <i class="bi bi-telephone-fill contact-icon"></i>
+                            <div class="contact-icon-container">
+                                <i class="bi bi-telephone-fill contact-icon"></i>
+                            </div>
                             <div>
                                 <h5>Teléfonos</h5>
-                                <p class="mb-1 text-white-50">(81) 1680-4447</p>
-                                <p class="mb-0 text-white-50">(81) 8074-5704</p>
+                                <p class="mb-0 text-white-50">(81) 1680-4447</p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="bi bi-whatsapp contact-icon"></i>
+                            <div class="contact-icon-container">
+                                <i class="bi bi-whatsapp contact-icon"></i>
+                            </div>
                             <div>
                                 <h5>WhatsApp Ventas</h5>
                                 <p class="mb-0 text-white-50">+52 1 81 1680 4447</p>
@@ -737,10 +804,12 @@
                         </div>
                         
                         <div class="contact-item">
-                            <i class="bi bi-envelope-fill contact-icon"></i>
+                            <div class="contact-icon-container">
+                                <i class="bi bi-envelope-fill contact-icon"></i>
+                            </div>
                             <div>
                                 <h5>Correo Electrónico</h5>
-                                <p class="mb-0 text-white-50">ventas@tubosyvalvulasml.com</p>
+                                <p class="mb-0 text-white-50 text-break">ventas@tubosyvalvulasml.com</p>
                             </div>
                         </div>
                     </div>
