@@ -441,32 +441,6 @@
             color: rgba(255,255,255,0.5);
         }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            left: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            color: #FFF;
-            transform: scale(1.1);
-        }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
@@ -487,13 +461,6 @@
                 background-color: var(--primary-blue);
                 padding: 20px;
                 margin-top: 15px;
-            }
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                left: 20px;
-                font-size: 28px;
             }
         }
     </style>
@@ -775,10 +742,6 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/528180745704?text=Hola" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
 
     <!-- 3D Background Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -813,6 +776,15 @@
                     }, false)
                 })
         })()
+    </script>
+
+    <!-- ChatDox / Chatbot Script -->
+    <script src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
+    <script>
+        CHATKODEX.init({
+            host: window.location.host,
+            key: 'RkwrVKkVvrlS7'
+        });
     </script>
 </body>
 </html>
