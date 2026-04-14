@@ -511,15 +511,16 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="img/nosotros-soldador.jpg" class="img-fluid rounded shadow" alt="Procesos industriales - Soldadura">
                 </div>
-                <div class="col-lg-6 text-center">
-                    <h3 class="mb-3 text-center" style="color: var(--primary-blue); font-weight: 700;">Comprometidos con el desarrollo industrial</h3>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h3 class="mb-3" style="color: var(--primary-blue); font-weight: 700;">Comprometidos con el desarrollo industrial</h3>
                     <p class="text-muted">En Tubos y Válvulas ML nos especializamos en proveer soluciones integrales de infraestructura para la industria en el Sur y Noreste del país.</p>
                     <p class="text-muted">Contamos con un amplio catálogo de productos que cumplen con los más altos estándares de calidad y normas internacionales, garantizando seguridad y eficiencia en todos sus proyectos.</p>
 
                 </div>
             </div>
 
-            <div class="row g-4 mt-2">
+            <!-- Desktop Stats Grid -->
+            <div class="row g-4 mt-2 d-none d-md-flex">
                 <div class="col-md-4">
                     <div class="stats-box">
                         <i class="bi bi-building stats-icon"></i>
@@ -542,6 +543,38 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Mobile Stats Carousel -->
+            <div id="statsCarousel" class="carousel slide d-md-none mt-4" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -50px;">
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-building stats-icon"></i>
+                            <div class="stats-number">15+</div>
+                            <p class="text-muted mb-0">Años de experiencia</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-box-seam stats-icon"></i>
+                            <div class="stats-number">500+</div>
+                            <p class="text-muted mb-0">Productos en Catálogo</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-people stats-icon"></i>
+                            <div class="stats-number">300+</div>
+                            <p class="text-muted mb-0">Clientes Satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -552,7 +585,8 @@
 
             <!-- Tuberías industriales -->
             <h4 class="mb-4" style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase; font-size: 1.25rem;">Tuberías industriales</h4>
-            <div class="row g-4 justify-content-center mb-5">
+            <!-- Tuberías Grid (Desktop) -->
+            <div class="row g-4 justify-content-center mb-5 d-none d-md-flex">
                 <div class="col-lg-4 col-md-6">
                     <img src="img/tuberia-acero-carbon.jpg" class="img-fluid shadow-sm w-100" style="height: 200px; object-fit: cover;" alt="Tubería de acero al carbón">
                     <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Tubería de acero al carbón</p>
@@ -567,9 +601,39 @@
                 </div>
             </div>
 
+            <!-- Tuberías Carousel (Mobile) -->
+            <div id="pipesCarousel" class="carousel slide d-md-none mb-5" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -15px;">
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="px-3">
+                            <img src="img/tuberia-acero-carbon.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Tubería de acero al carbón">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería de acero al carbón</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/tuberia-cobre.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Tubería de cobre">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería de cobre</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/tuberia-inoxidable.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Tubería inoxidable">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería inoxidable</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Válvulas industriales -->
             <h4 class="mb-4" style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase; font-size: 1.25rem;">Válvulas industriales</h4>
-            <div class="row g-4 justify-content-center">
+            <!-- Válvulas Grid (Desktop) -->
+            <div class="row g-4 justify-content-center d-none d-md-flex">
                 <div class="col-lg-4 col-md-6">
                     <img src="img/valvula-compuerta.jpg" class="img-fluid shadow-sm w-100" style="height: 200px; object-fit: cover;" alt="Válvulas compuerta bridadas">
                     <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Válvulas compuerta bridadas</p>
@@ -581,6 +645,35 @@
                 <div class="col-lg-4 col-md-6">
                     <img src="img/valvula-globo.jpg" class="img-fluid shadow-sm w-100" style="height: 200px; object-fit: cover;" alt="Válvulas globo">
                     <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Válvulas globo</p>
+                </div>
+            </div>
+
+            <!-- Válvulas Carousel (Mobile) -->
+            <div id="valvesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -15px;">
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="px-3">
+                            <img src="img/valvula-compuerta.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Válvulas compuerta bridadas">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas compuerta bridadas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/valvula-esfera.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Válvulas esfera roscadas">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas esfera roscadas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/valvula-globo.jpg" class="img-fluid shadow-sm w-100" style="height: 250px; object-fit: cover;" alt="Válvulas globo">
+                            <p class="mt-3 text-dark" style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas globo</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
