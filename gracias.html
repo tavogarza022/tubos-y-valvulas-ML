@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por contactarnos! | Tubos y Válvulas ML</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --accent-red: #D9230F;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Style */
+        .navbar {
+            padding: 15px 0;
+            background-color: var(--primary-blue) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* Thank You Section */
+        .thanks-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+
+        .thanks-card {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .thanks-title {
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .thanks-text {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn-back {
+            background-color: var(--accent-red);
+            color: var(--white);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-back:hover {
+            background-color: #b71c0c;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(217, 35, 15, 0.3);
+            color: var(--white);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #001f3f;
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+
+        .footer-heading {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-blanco.png" alt="Tubos y Válvulas ML">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <main class="thanks-section">
+        <div class="container">
+            <div class="thanks-card mx-auto">
+                <i class="bi bi-check-circle-fill success-icon"></i>
+                <h1 class="thanks-title">¡Mensaje Recibido!</h1>
+                <p class="thanks-text">Gracias por contactar a Tubos y Válvulas ML. Su requerimiento ha sido recibido con éxito y uno de nuestros asesores especializados se pondrá en contacto con usted a la brevedad.</p>
+                <a href="index.html" class="btn btn-back">Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h5 class="footer-heading">Tubos y Válvulas ML</h5>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Tubos y Válvulas ML. Todos los derechos reservados. | Diseño y Desarrollo por Agencia Futurite</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
