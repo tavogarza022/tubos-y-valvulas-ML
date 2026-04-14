@@ -48,6 +48,16 @@
             letter-spacing: 1px;
         }
 
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+            transition: max-height var(--transition-speed) ease;
+        }
+
+        .navbar.scrolled .navbar-brand img {
+            max-height: 40px;
+        }
+
         .nav-link {
             color: var(--white) !important;
             font-weight: 700;
@@ -473,14 +483,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">TUBOS Y VÁLVULAS ML</a>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-blanco.png" alt="Tubos y Válvulas ML">
+            </a>
             <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Compromiso</a></li>
                     <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
