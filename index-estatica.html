@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tubos y Válvulas ML | Infraestructura Industrial</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18087363953"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18087363953');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MX6M85RP');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons (Optional but recommended) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --accent-red: #D9230F;
+            --white: #ffffff;
+            --transition-speed: 0.4s;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Style */
+        .navbar {
+            transition: padding var(--transition-speed) ease;
+            padding: 15px 0;
+            background-color: var(--primary-blue) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--white) !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+            transition: max-height var(--transition-speed) ease;
+        }
+
+        .navbar.scrolled .navbar-brand img {
+            max-height: 40px;
+        }
+
+        .nav-link {
+            color: var(--white) !important;
+            font-weight: 700;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .btn-cotizar {
+            background-color: var(--accent-red);
+            border: 2px solid var(--accent-red);
+            color: var(--white);
+            font-weight: 700;
+            padding: 8px 20px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border-radius: 4px;
+        }
+
+        .btn-cotizar:hover {
+            background-color: #b71c0c;
+            border-color: #b71c0c;
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        .hero-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 51, 102, 0.7), rgba(0, 0, 0, 0.3));
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: absolute;
+            z-index: 1;
+            left: 200px;
+            max-width: 620px;
+            text-align: left;
+        }
+
+        .hero-headline {
+            font-weight: 800;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-subheadline {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .btn-hero-cta {
+            background-color: var(--accent-red);
+            color: var(--white);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 0;
+            text-transform: uppercase;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-hero-cta:hover {
+            background-color: #b71c0c;
+            transform: translateY(-5px);
+            color: var(--white);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-red);
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* Nosotros Section */
+        #nosotros {
+            background-color: #f8f9fa;
+        }
+
+        .stats-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            height: 100%;
+            border-bottom: 4px solid var(--accent-red);
+            transition: transform 0.3s;
+        }
+
+        .stats-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        /* Productos Section */
+        #productos {
+            background-color: var(--white);
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img-wrapper {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+
+        .product-body {
+            padding: 25px;
+            position: relative;
+            background: var(--white);
+        }
+
+        .product-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary-custom {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            font-weight: 700;
+            padding: 8px 20px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Contacto Section */
+        #contacto {
+            background-color: #f8f9fa;
+            position: relative;
+        }
+
+        .contact-info {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 48px;
+            border-radius: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        /* Transparent wrapper for web to maintain original structure */
+        .contact-icon-container {
+            display: contents;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent-red);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .contact-item h5 {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .contact-link-hover {
+            transition: all 0.3s;
+        }
+
+        .contact-link-hover:hover {
+            color: var(--white) !important;
+            text-decoration: underline !important;
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.2rem rgba(0, 51, 102, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: #999;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .form-control:focus::placeholder {
+            color: transparent;
+        }
+
+        .btn-submit {
+            background-color: var(--accent-red);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #b71c0c;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #001f3f;
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-heading {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+
+            .contact-info {
+                padding: 30px 20px;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .section-subtitle {
+                margin-bottom: 30px;
+            }
+
+            .hero {
+                justify-content: center;
+            }
+
+            .hero-content {
+                position: relative;
+                left: auto;
+                text-align: center;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
+            .hero-headline {
+                font-size: 2.2rem;
+            }
+
+            .navbar-collapse {
+                background-color: var(--primary-blue);
+                padding: 20px;
+                margin-top: 15px;
+            }
+
+            /* Mobile-only contact alignment fixes */
+            .contact-icon-container {
+                display: flex;
+                width: 40px;
+                flex-shrink: 0;
+                justify-content: flex-start;
+                padding-top: 6px;
+            }
+
+            .contact-icon {
+                font-size: 1.3rem;
+                margin-top: 0;
+                margin-right: 0;
+                line-height: 1;
+            }
+
+            .contact-item h5 {
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+                line-height: 1.2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX6M85RP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-blanco.png" alt="Tubos y Válvulas ML">
+            </a>
+            <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-cotizar" href="#contacto">Cotizar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-image-container">
+            <img src="img/hero-static.png" alt="Infraestructura Industrial - Tubos y Válvulas ML">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-start">
+            <h1 class="hero-headline">Proveedores de material industrial.</h1>
+            <h2 class="hero-subheadline">Tubería y válvulas con entrega inmediata en NL y embarques a toda la república
+                mexicana.</h2>
+            <a href="#contacto" class="btn btn-hero-cta shadow-lg">¡Cotiza ahora!</a>
+        </div>
+    </header>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/nosotros-soldador.jpg" class="img-fluid rounded shadow"
+                        alt="Procesos industriales - Soldadura">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h3 class="mb-3" style="color: var(--primary-blue); font-weight: 700;">¿Quiénes somos?</h3>
+                    <p class="text-muted">En Tubos y Válvulas ML, somos más que un almacén; somos el stock estratégico de México. Nos especializamos en la comercialización de tubería de acero al carbón, tubería de acero inoxidable y una línea completa de válvulas industriales que cumplen con los estándares internacionales.</p>
+                    <p class="text-muted">Nuestra misión es simple: que tu operación nunca se detenga por falta de tubería y válvulas de calidad.</p>
+                </div>
+            </div>
+
+            <!-- Desktop Stats Grid -->
+            <div class="row g-4 mt-2 d-none d-md-flex">
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="bi bi-building stats-icon"></i>
+                        <div class="stats-number">7+</div>
+                        <p class="text-muted mb-0">Años de experiencia</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="bi bi-box-seam stats-icon"></i>
+                        <div class="stats-number">500+</div>
+                        <p class="text-muted mb-0">Productos en Catálogo</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="bi bi-people stats-icon"></i>
+                        <div class="stats-number">300+</div>
+                        <p class="text-muted mb-0">Clientes Satisfechos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Stats Carousel -->
+            <div id="statsCarousel" class="carousel slide d-md-none mt-4" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -50px;">
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#statsCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                        style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-building stats-icon"></i>
+                            <div class="stats-number">7+</div>
+                            <p class="text-muted mb-0">Años de experiencia</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-box-seam stats-icon"></i>
+                            <div class="stats-number">500+</div>
+                            <p class="text-muted mb-0">Productos en Catálogo</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="stats-box mx-auto" style="max-width: 280px;">
+                            <i class="bi bi-people stats-icon"></i>
+                            <div class="stats-number">300+</div>
+                            <p class="text-muted mb-0">Clientes Satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Nuestros productos</h2>
+
+            <!-- Tuberías industriales -->
+            <h4 class="mb-4"
+                style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase; font-size: 1.25rem;">
+                Tuberías industriales</h4>
+            <!-- Tuberías Grid (Desktop) -->
+            <div class="row g-4 justify-content-center mb-5 d-none d-md-flex">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/tuberia-acero-carbon.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Tubería de acero al carbón">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Tubería de acero al carbón</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/tuberia-cobre.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Tubería de cobre">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Tubería de cobre</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/tuberia-inoxidable.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Tubería inoxidable">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Tubería inoxidable</p>
+                </div>
+            </div>
+
+            <!-- Tuberías Carousel (Mobile) -->
+            <div id="pipesCarousel" class="carousel slide d-md-none mb-5" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -15px;">
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#pipesCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                        style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="px-3">
+                            <img src="img/tuberia-acero-carbon.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Tubería de acero al carbón">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería de acero
+                                al carbón</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/tuberia-cobre.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Tubería de cobre">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería de cobre
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/tuberia-inoxidable.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Tubería inoxidable">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Tubería
+                                inoxidable</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Válvulas industriales -->
+            <h4 class="mb-4"
+                style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase; font-size: 1.25rem;">
+                Válvulas industriales</h4>
+            <!-- Válvulas Grid (Desktop) -->
+            <div class="row g-4 justify-content-center d-none d-md-flex">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/valvula-compuerta.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Válvulas compuerta bridadas">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Válvulas compuerta bridadas</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/valvula-esfera.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Válvulas esfera roscadas">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Válvulas esfera roscadas</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/valvula-globo.jpg" class="img-fluid shadow-sm w-100"
+                        style="height: 200px; object-fit: cover;" alt="Válvulas globo">
+                    <p class="mt-3 text-dark"
+                        style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Válvulas globo</p>
+                </div>
+            </div>
+
+            <!-- Válvulas Carousel (Mobile) -->
+            <div id="valvesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -15px;">
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1" style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        style="background-color: var(--accent-red);"></button>
+                    <button type="button" data-bs-target="#valvesCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                        style="background-color: var(--accent-red);"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="px-3">
+                            <img src="img/valvula-compuerta.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Válvulas compuerta bridadas">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas
+                                compuerta bridadas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/valvula-esfera.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Válvulas esfera roscadas">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas esfera
+                                roscadas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="px-3">
+                            <img src="img/valvula-globo.jpg" class="img-fluid shadow-sm w-100"
+                                style="height: 250px; object-fit: cover;" alt="Válvulas globo">
+                            <p class="mt-3 text-dark"
+                                style="font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Válvulas globo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proveedor de Confianza Section -->
+    <section id="proveedor" class="bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/proveedor-confianza.jpg" class="img-fluid rounded shadow w-100"
+                        style="object-fit: cover; aspect-ratio: 4/3;" alt="Proveedor Industrial de Confianza">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="mb-4" style="color: var(--primary-blue); font-weight: 700;">Somos tu proveedor industrial
+                        de confianza</h2>
+                    <ul class="list-unstyled mt-0 d-inline-block text-start">
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span
+                                class="text-muted">Entrega rápida</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span
+                                class="text-muted">Disponibilidad inmediata</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span
+                                class="text-muted">Calidad garantizada</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-danger me-2 fs-5"></i> <span
+                                class="text-muted">Productos certificados con normas internacionales</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos listos para atender sus requerimientos</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info shadow">
+                        <h3 class="mb-4 text-white">Contacto</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-container">
+                                <i class="bi bi-geo-alt-fill contact-icon"></i>
+                            </div>
+                            <div>
+                                <h5>Dirección Principal</h5>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Villa+Sofia+115+Col.+Las+Villas+Gral+Escobedo+66062"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="mb-0 text-white-50 text-decoration-none contact-link-hover d-block">Col. Las
+                                    Villas, Villa Sofia 115, Gral Escobedo, C.P. 66062 <i
+                                        class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem;"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-container">
+                                <i class="bi bi-telephone-fill contact-icon"></i>
+                            </div>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p class="mb-0 text-white-50">(81) 1680-4447</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-container">
+                                <i class="bi bi-whatsapp contact-icon"></i>
+                            </div>
+                            <div>
+                                <h5>WhatsApp Ventas</h5>
+                                <p class="mb-0 text-white-50">+52 1 81 1680 4447</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-container">
+                                <i class="bi bi-envelope-fill contact-icon"></i>
+                            </div>
+                            <div>
+                                <h5>Correo Electrónico</h5>
+                                <p class="mb-0 text-white-50 text-break">ventas@tubosyvalvulasml.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4" style="color: var(--primary-blue);">Envíenos un mensaje</h3>
+                            <form action="gracias.html" method="GET" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nombre" class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Su nombre"
+                                            required>
+                                        <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="empresa" class="form-label">Empresa</label>
+                                        <input type="text" class="form-control" id="empresa"
+                                            placeholder="Nombre de su empresa" required>
+                                        <div class="invalid-feedback">Por favor ingrese el nombre de su empresa.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="ejemplo@empresa.com" required>
+                                        <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="telefono" class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" id="telefono" placeholder="A 10 dígitos"
+                                            required pattern="[0-9]{10}">
+                                        <div class="invalid-feedback">Por favor ingrese un teléfono válido de 10
+                                            dígitos.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="mensaje" class="form-label">Mensaje o requerimiento</label>
+                                        <textarea class="form-control" id="mensaje" rows="4"
+                                            placeholder="Describa los productos que busca..." required></textarea>
+                                        <div class="invalid-feedback">Por favor detalle su requerimiento.</div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-submit">Enviar Cotización</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">REDES SOCIALES</h5>
+
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/people/Tubos-V%C3%A1lvulas-ML/61578206798290/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white bg-primary bg-opacity-25 p-2 rounded-circle d-inline-flex"><i
+                                class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Productos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#productos">Tuberías Industriales</a></li>
+                        <li><a href="#productos">Válvulas Industriales</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Horario</h5>
+                    <ul class="footer-links">
+                        <li class="text-white-50">Lunes a Viernes:<br> 8:00 AM - 6:00 PM</li>
+                        <li class="text-white-50">Sábado:<br> 9:00 AM - 1:00 PM</li>
+                        <li class="text-white-50">Domingo: Cerrado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Tubos y Válvulas ML. Todos los derechos reservados. | <a
+                        href="20260409153701_Aviso_de_Privacidad_TubosyValvulasML.pdf" target="_blank"
+                        class="text-white-50 text-decoration-none">Aviso de Privacidad</a> | Diseño y Desarrollo por
+                    Agencia Futurite</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Bootstrap validation script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+    <!-- ChatDox / Chatbot Script -->
+    <script src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
+    <script>
+        CHATKODEX.init({
+            host: window.location.host,
+            key: 'RkwrVKkVvrlS7'
+        });
+    </script>
+</body>
+
+</html>
